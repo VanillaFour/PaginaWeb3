@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil - MiPlataforma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="perfil-style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">MiPlataforma</a></h1>
+            <nav class="main-nav">
+                <ul></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile-grid">
+            <aside class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-banner"></div>
+                    <img src="https://via.placeholder.com/150" alt="Avatar" class="profile-avatar">
+                    <h2 id="profile-username">Cargando...</h2>
+                    <p class="profile-bio">Bienvenido a tu espacio. Aquí puedes ver un resumen de tu actividad como autor.</p>
+                </div>
+                <div class="profile-stats-card">
+                    <h3>Tus Estadísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value" id="stats-stories">0</span>
+                            <span class="stat-label">Historias</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="stats-chapters">0</span>
+                            <span class="stat-label">Capítulos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="stats-genre">N/A</span>
+                            <span class="stat-label">Género Fav.</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="profile-main-content">
+                <h3>Mis Historias Publicadas</h3>
+                <div class="story-grid" id="user-stories-grid">
+                    <p id="no-stories-msg" style="display: none;">No has publicado ninguna historia. <a href="subir-historia.html">¡Crea la primera!</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <a href="index.html" class="floating-home-btn" title="Volver al Inicio">🏠</a>
+    <script src="auth.js"></script>
+    <script src="perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - MiPlataforma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sesion-style.css">
+    <a href="index.html" class="floating-home-btn" title="Volver al Inicio">
+    🏠
+</a>
+</head>
+<body>
+    <header class="main-header"></header>
+
+    <main class="container">
+        <div class="session-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Entrar</button>
+                <p class="session-switch">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+            </form>
+        </div>
+    </main>
+    <script src="auth.js"></script>
+</body>
+</html>

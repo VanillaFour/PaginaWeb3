@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="storyTitleMeta">Leyendo Historia - MiPlataforma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="leer-historia-style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">MiPlataforma</a></h1>
+            <nav class="main-nav">
+                <ul></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="navigation-actions">
+            <button onclick="history.back()" class="btn-back">← Volver Atrás</button>
+        </div>
+
+        <div class="story-page-container">
+            <div class="story-header">
+                <h2 id="story-title">Cargando...</h2>
+                <div class="story-meta">
+                    <a href="#" class="author-link" id="story-author"></a>
+                    <div class="likes-container">
+                        <button id="like-btn" class="like-btn">❤️</button>
+                        <span id="like-count">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story-content" id="story-content">
+                <p>Cargando contenido...</p>
+            </div>
+            <div class="story-actions"></div>
+        </div>
+        
+        <div id="add-chapter-container" style="display: none;">
+            <h3>Añadir Nuevo Capítulo</h3>
+            <form id="add-chapter-form">
+                <div class="form-group">
+                    <label for="chapter-title">Título del Capítulo:</label>
+                    <input type="text" id="chapter-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="chapter-content">Contenido:</label>
+                    <textarea id="chapter-content" rows="10" required></textarea>
+                </div>
+                <button type="submit">Añadir Capítulo</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer"></footer>
+    <a href="index.html" class="floating-home-btn" title="Volver al Inicio">🏠</a>
+    <script src="auth.js"></script>
+    <script src="script-historia.js"></script>
+</body>
+</html>

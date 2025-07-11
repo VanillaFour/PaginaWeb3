@@ -1,0 +1,97 @@
+/* perfil-style.css (NUEVO DISEÑO) */
+
+/* Layout principal de la página de perfil */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Columna fija a la izquierda, flexible a la derecha */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Columna lateral del perfil */
+.profile-sidebar .profile-card,
+.profile-sidebar .profile-stats-card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-card {
+    padding: 0;
+    overflow: hidden; /* Para que el banner se quede dentro de los bordes redondeados */
+}
+
+.profile-banner {
+    height: 120px;
+    background: linear-gradient(45deg, var(--primary-color), #5892d3);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--white-color);
+    margin-top: -60px; /* Sube el avatar para que se superponga con el banner */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.profile-card h2 {
+    margin: 15px 0 10px;
+    color: var(--primary-color);
+}
+
+.profile-bio {
+    padding: 0 20px 20px;
+    color: var(--secondary-color);
+    font-size: 0.9em;
+}
+
+/* Tarjeta de estadísticas */
+.profile-stats-card h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.stat-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.8em;
+    color: var(--secondary-color);
+}
+
+/* Contenido principal (lista de historias) */
+.profile-main-content h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Apila las columnas */
+    }
+}

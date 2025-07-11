@@ -1,0 +1,684 @@
+/* Estilos generales */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --light-gray: #e9ecef;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #212529;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Header */
+.main-header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--light-gray);
+    box-shadow: var(--box-shadow);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.logo a {
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 10px;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.search-bar input {
+    border: 1px solid var(--light-gray);
+    padding: 8px 12px;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    flex-grow: 1;
+    font-size: 0.9em;
+}
+
+.search-bar button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 280px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.latest-stories {
+    flex: 3;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Historias populares (Tabla) */
+.popular-stories table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.popular-stories th,
+.popular-stories td {
+    border: 1px solid var(--light-gray);
+    padding: 8px;
+    text-align: left;
+}
+
+.popular-stories th {
+    background-color: var(--light-gray);
+    font-weight: bold;
+}
+
+.popular-stories tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Historias destacadas (Publicidad) */
+.promoted-stories {
+    margin-top: 30px;
+}
+
+.promotion-card {
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.promotion-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+.promotion-card h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.promotion-card .author {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.promotion-card .description {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+/* Grid de historias */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.story-card {
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.story-card img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+.story-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.story-card .author,
+.story-card .genre {
+    font-size: 0.85em;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.story-card .read-more {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.story-card .read-more:hover {
+    background-color: #0056b3;
+}
+
+.load-more {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.load-more:hover {
+    background-color: #5a6268;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-nav li {
+    margin-left: 20px;
+}
+
+.footer-nav a {
+    color: white;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        align-items: flex-start;
+    }
+
+    .main-nav li {
+        margin: 0 0 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 15px;
+        max-width: none;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar, .latest-stories {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+    }
+
+    .footer-nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para la página de lectura de historia (leer-historia.html) */
+.story-page-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.story-header h2 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.story-header .author-link {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.story-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    white-space: pre-wrap; /* Mantiene saltos de línea y espacios del texto */
+}
+
+.story-content p {
+    margin-bottom: 1em;
+}
+
+.story-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.story-actions button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.story-actions button:hover {
+    background-color: #0056b3;
+}
+/* ... (Todo el CSS anterior permanece igual) ... */
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        align-items: flex-start;
+    }
+
+    .main-nav li {
+        margin: 0 0 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 15px;
+        max-width: none;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar, .latest-stories {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+    }
+
+    .footer-nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para la página de lectura de historia (leer-historia.html) */
+.story-page-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.story-header h2 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.story-header .author-link {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.story-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    white-space: pre-wrap; /* Mantiene saltos de línea y espacios del texto */
+}
+
+.story-content p {
+    margin-bottom: 1em;
+}
+
+.story-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.story-actions button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.story-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* CAMBIO: Nuevos estilos para la página de perfil (perfil.html) */
+.profile-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+    width: 100%;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--light-gray);
+    box-shadow: var(--box-shadow);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    font-size: 2em;
+}
+
+.profile-bio {
+    margin: 10px 0 15px 0;
+    color: var(--secondary-color);
+    line-height: 1.7;
+}
+
+.edit-profile-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background-color: #5a6268;
+}
+
+.user-stories h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #212529;
+}
+/* style.css - Añadir al final */
+.floating-home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+/* Añadir al final de style.css */
+
+/* Estilos para la nueva sección Top Historias */
+.top-stories {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.top-stories h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+}
+
+.top-story-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.top-story-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.top-story-rank {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-right: 15px;
+    width: 30px;
+}
+
+.top-story-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-story-title {
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+.top-story-title:hover {
+    color: var(--primary-color);
+}
+
+.top-story-likes {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}

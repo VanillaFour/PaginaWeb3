@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - MiPlataforma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sesion-style.css">
+    <script src="auth.js"></script>
+    <a href="index.html" class="floating-home-btn" title="Volver al Inicio">
+    🏠
+</a>
+</head>
+<body>
+    <header class="main-header"></header>
+
+    <main class="container">
+        <div class="session-container">
+            <h2>Crear una Cuenta</h2>
+            <form id="registro-form">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Registrarse</button>
+                <p class="session-switch">¿Ya tienes cuenta? <a href="iniciar-sesion.html">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </main>
+    <script src="auth.js"></script>
+</body>
+</html>

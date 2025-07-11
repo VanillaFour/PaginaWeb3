@@ -1,0 +1,148 @@
+/* leer-historia-style.css - ESTILOS ESPECÍFICOS PARA LA PÁGINA DE LECTURA */
+
+/* Controles de Lectura */
+.reading-controls {
+    background-color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 30px auto 0;
+    text-align: center;
+    max-width: fit-content;
+}
+.reading-controls span {
+    margin-right: 15px;
+    font-weight: bold;
+}
+.reading-controls .theme-btn {
+    padding: 8px 15px;
+    border: 1px solid var(--light-gray);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.reading-controls .theme-btn:hover {
+    background-color: var(--light-gray);
+}
+
+/* Contenedor Principal de la Historia */
+.story-page-container {
+    background-color: var(--white-color);
+    padding: 50px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 25px;
+}
+
+.story-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.story-header .author-link {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+
+.story-content {
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 75ch; /* Ancho ideal para lectura */
+    margin: 0 auto;
+    text-align: justify;
+    white-space: pre-wrap;
+}
+
+.story-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+.story-actions button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 10px;
+}
+
+/* 🎨 REGLAS PARA LOS TEMAS DE LECTURA */
+
+/* TEMA SEPIA */
+body.theme-sepia { background-color: #f4e8d5; }
+body.theme-sepia .story-page-container,
+body.theme-sepia .reading-controls,
+body.theme-sepia .main-header,
+body.theme-sepia .main-footer {
+    background-color: #fdf6e3;
+    color: #5b4636;
+}
+body.theme-sepia h1, body.theme-sepia h2, body.theme-sepia h3 { color: #5b4636; }
+body.theme-sepia a { color: #cb4b16; }
+
+/* TEMA OSCURO */
+body.theme-dark { background-color: #121212; }
+body.theme-dark .story-page-container,
+body.theme-dark .reading-controls,
+body.theme-dark .main-header,
+body.theme-dark .main-footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+body.theme-dark h1, body.theme-dark h2, body.theme-dark h3 { color: #e0e0e0; }
+body.theme-dark a, body.theme-dark .logo a { color: #bb86fc; }
+body.theme-dark .story-header { border-color: #444; }
+/* Añadir al final de leer-historia-style.css */
+
+.story-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-btn {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
+    border-color: #ff4757;
+}
+
+.like-btn.liked {
+    background-color: #ff4757;
+    color: white;
+    border-color: #ff4757;
+}
+
+#like-count {
+    font-weight: bold;
+    font-size: 1.2em;
+}

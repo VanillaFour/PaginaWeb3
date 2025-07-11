@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Historia - Mi Plataforma de Historias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="subir-historia-style.css">
+<a href="index.html" class="floating-home-btn" title="Volver al Inicio">
+    🏠
+</a>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">MiPlataforma</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="subir-historia.html">Subir Historia</a></li>
+                    <li><a href="perfil.html">Mi Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="upload-form-container">
+            <div class="form-header">
+                <h2>Publica tu Próxima Gran Historia</h2>
+                <p>Completa los siguientes campos para compartir tu creación con el mundo.</p>
+            </div>
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="title">Título de la Historia:</label>
+                    <input type="text" id="title" name="title" required placeholder="Ej: El Jardín de los Ecos">
+                </div>
+
+
+                
+                <div class="form-group">
+                    <label for="genre">Género:</label>
+                    <select id="genre" name="genre" required>
+                        <option value="">Selecciona un género</option>
+                        <option value="Fantasía">Fantasía</option>
+                        <option value="Ciencia Ficción">Ciencia Ficción</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Misterio">Misterio</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Aventura">Aventura</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Contenido de la Historia:</label>
+                    <textarea id="content" name="content" rows="15" required placeholder="Érase una vez..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Subir y Publicar Historia</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 MiPlataforma. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+      <script src="auth.js"></script>
+    <script src="subir-historia.js"></script>
+</body>
+</html>
